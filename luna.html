@@ -36,49 +36,49 @@
   <div class="progress-nav-container">
     <ul class="progress-nav-list">
       <li class="progress-nav-item" data-section="overview">
-        <div class="progress-nav-dot"></div>
+        <div class="progress-nav-dot" data-number="01"></div>
         <div class="progress-nav-label">
           <span class="progress-nav-stage">START</span>
           <span class="progress-nav-title">Overview</span>
         </div>
       </li>
       <li class="progress-nav-item" data-section="discover">
-        <div class="progress-nav-dot"></div>
+        <div class="progress-nav-dot" data-number="02"></div>
         <div class="progress-nav-label">
           <span class="progress-nav-stage">DISCOVER</span>
           <span class="progress-nav-title">Problem</span>
         </div>
       </li>
       <li class="progress-nav-item" data-section="research">
-        <div class="progress-nav-dot"></div>
+        <div class="progress-nav-dot" data-number="03"></div>
         <div class="progress-nav-label">
           <span class="progress-nav-stage">RESEARCH</span>
           <span class="progress-nav-title">Insights</span>
         </div>
       </li>
       <li class="progress-nav-item" data-section="define">
-        <div class="progress-nav-dot"></div>
+        <div class="progress-nav-dot" data-number="04"></div>
         <div class="progress-nav-label">
           <span class="progress-nav-stage">DEFINE</span>
           <span class="progress-nav-title">User Needs</span>
         </div>
       </li>
       <li class="progress-nav-item" data-section="develop">
-        <div class="progress-nav-dot"></div>
+        <div class="progress-nav-dot" data-number="05"></div>
         <div class="progress-nav-label">
           <span class="progress-nav-stage">DEVELOP</span>
           <span class="progress-nav-title">Design</span>
         </div>
       </li>
       <li class="progress-nav-item" data-section="deliver">
-        <div class="progress-nav-dot"></div>
+        <div class="progress-nav-dot" data-number="06"></div>
         <div class="progress-nav-label">
           <span class="progress-nav-stage">DELIVER</span>
           <span class="progress-nav-title">Solution</span>
         </div>
       </li>
       <li class="progress-nav-item" data-section="reflection">
-        <div class="progress-nav-dot"></div>
+        <div class="progress-nav-dot" data-number="07"></div>
         <div class="progress-nav-label">
           <span class="progress-nav-stage">REFLECT</span>
           <span class="progress-nav-title">Learnings</span>
@@ -543,27 +543,88 @@
   function updateActiveSection() {
     const sections = ['overview', 'discover', 'research', 'define', 'develop', 'deliver', 'reflection'];
     let currentSection = '';
+    let maxProgress = 0;
+    const windowHeight = window.innerHeight;
+    const triggerPoint = windowHeight * 0.3; // 30% from top
 
+    // Find which section is most visible in the trigger area
     sections.forEach(sectionId => {
       const element = document.getElementById(sectionId);
       if (element) {
         const rect = element.getBoundingClientRect();
-        const offset = 200; // Offset from top to trigger active state
+        const sectionTop = rect.top;
+        const sectionBottom = rect.bottom;
+        const sectionHeight = rect.height;
         
-        if (rect.top <= offset && rect.bottom >= offset) {
+        // Calculate how much of the section is in the viewport
+        const visibleTop = Math.max(0, Math.min(sectionBottom, windowHeight) - Math.max(sectionTop, 0));
+        const visiblePercent = visibleTop / sectionHeight;
+        
+        // Check if section is in the trigger area
+        if (sectionTop <= triggerPoint && sectionBottom >= triggerPoint) {
           currentSection = sectionId;
+        }
+        
+        // Track progress for visual line
+        if (sectionTop < triggerPoint) {
+          const sectionIndex = sections.indexOf(sectionId);
+          if (sectionIndex > maxProgress) {
+            maxProgress = sectionIndex;
+          }
         }
       }
     });
 
-    // Update active state in nav
+    // If no section in trigger area, use the closest one
+    if (!currentSection) {
+      let minDistance = Infinity;
+      sections.forEach(sectionId => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const distance = Math.abs(rect.top - triggerPoint);
+          if (distance < minDistance) {
+            minDistance = distance;
+            currentSection = sectionId;
+          }
+        }
+      });
+    }
+
+    // Update active state and passed state in nav
     progressNavItems.forEach(item => {
-      if (item.dataset.section === currentSection) {
+      const sectionId = item.dataset.section;
+      const sectionIndex = sections.indexOf(sectionId);
+      const currentIndex = sections.indexOf(currentSection);
+      
+      if (sectionId === currentSection) {
         item.classList.add('active');
-      } else {
+        item.classList.remove('passed');
+      } else if (sectionIndex < currentIndex) {
         item.classList.remove('active');
+        item.classList.add('passed');
+      } else {
+        item.classList.remove('active', 'passed');
       }
     });
+
+    // Update the progress line height dynamically
+    updateProgressLine(sections, currentSection);
+  }
+
+  // Update progress line based on current section
+  function updateProgressLine(sections, currentSection) {
+    const progressContainer = document.querySelector('.progress-nav-container');
+    if (!progressContainer) return;
+
+    const currentIndex = sections.indexOf(currentSection);
+    const totalItems = sections.length - 1;
+    
+    if (currentIndex >= 0) {
+      // Calculate the percentage based on current section
+      const lineProgress = (currentIndex / totalItems) * 100;
+      progressContainer.style.setProperty('--progress-height', `${lineProgress}%`);
+    }
   }
 
   // Click handlers for progress nav
