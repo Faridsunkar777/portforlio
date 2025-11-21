@@ -10091,8 +10091,9 @@ textarea {
   margin: 100px 0 !important;
   position: relative;
   overflow: hidden;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
+  border: 1px solid #333;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
 /* Subtle pattern overlay */
@@ -10195,6 +10196,7 @@ textarea {
   .case-study-step-reflection {
     padding: 80px 40px !important;
     margin: 80px 0 !important;
+    border-radius: 14px;
   }
 
   .case-study-step-reflection h2 {
@@ -10213,6 +10215,7 @@ textarea {
   .case-study-step-reflection {
     padding: 60px 30px !important;
     margin: 60px 0 !important;
+    border-radius: 12px;
   }
 
   .case-study-step-reflection h2 {
@@ -10244,6 +10247,7 @@ textarea {
   .case-study-step-reflection {
     padding: 50px 20px !important;
     margin: 50px 0 !important;
+    border-radius: 10px;
   }
 
   .case-study-step-reflection h2 {
