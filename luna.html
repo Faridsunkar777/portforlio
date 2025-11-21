@@ -25,6 +25,72 @@
 <div id="site-border-right"></div>
 <div id="site-border-top"></div>
 <div id="site-border-bottom"></div>
+
+<!-- Reading Progress Bar -->
+<div class="reading-progress-bar">
+  <div class="reading-progress-fill" id="progressFill"></div>
+</div>
+
+<!-- Project Progress Navigation -->
+<nav class="project-progress-nav" id="progressNav">
+  <ul class="progress-nav-list">
+    <li class="progress-nav-item" data-section="overview">
+      <div class="progress-nav-label">
+        <span class="progress-nav-stage">Start</span>
+        Overview
+      </div>
+      <div class="progress-nav-dot"></div>
+    </li>
+    <li class="progress-nav-item" data-section="discover">
+      <div class="progress-nav-label">
+        <span class="progress-nav-stage">Discover</span>
+        Problem
+      </div>
+      <div class="progress-nav-dot"></div>
+    </li>
+    <li class="progress-nav-item" data-section="research">
+      <div class="progress-nav-label">
+        <span class="progress-nav-stage">Research</span>
+        Insights
+      </div>
+      <div class="progress-nav-dot"></div>
+    </li>
+    <li class="progress-nav-item" data-section="define">
+      <div class="progress-nav-label">
+        <span class="progress-nav-stage">Define</span>
+        User Needs
+      </div>
+      <div class="progress-nav-dot"></div>
+    </li>
+    <li class="progress-nav-item" data-section="develop">
+      <div class="progress-nav-label">
+        <span class="progress-nav-stage">Develop</span>
+        Design
+      </div>
+      <div class="progress-nav-dot"></div>
+    </li>
+    <li class="progress-nav-item" data-section="deliver">
+      <div class="progress-nav-label">
+        <span class="progress-nav-stage">Deliver</span>
+        Solution
+      </div>
+      <div class="progress-nav-dot"></div>
+    </li>
+    <li class="progress-nav-item" data-section="reflection">
+      <div class="progress-nav-label">
+        <span class="progress-nav-stage">Reflect</span>
+        Learnings
+      </div>
+      <div class="progress-nav-dot"></div>
+    </li>
+  </ul>
+</nav>
+
+<!-- Scroll to Top Button -->
+<div class="scroll-to-top" id="scrollToTop">
+  <i class="fa fa-arrow-up"></i>
+</div>
+
 <!-- Add your content of header -->
 <header>
   <nav class="navbar  navbar-fixed-top navbar-default">
@@ -65,7 +131,7 @@
   </nav>
 </header>
 <!-- Project Hero Section -->
-<div class="project-hero-section">
+<div class="project-hero-section" id="overview">
   <div class="container-fluid project-hero-container">
     <!-- Project Header -->
     <div class="project-header">
@@ -149,7 +215,7 @@
     </div>
 
           <!-- Problem Statement -->
-          <div class="case-study-step case-study-step-bordered">
+          <div class="case-study-step case-study-step-bordered" id="discover">
             <div class="row">
               <div class="col-xs-12 col-md-3">
                 <div class="case-study-step-header">
@@ -167,7 +233,7 @@
           </div>
 
           <!-- Background Research -->
-          <div class="case-study-step">
+          <div class="case-study-step" id="research">
             <div class="row">
               <div class="col-xs-12 col-md-3">
                 <div class="case-study-step-header">
@@ -208,7 +274,7 @@
           </div>
 
 <!-- User Persona -->
-          <div class="case-study-step">
+          <div class="case-study-step" id="define">
             <div class="row">
               <div class="col-xs-12 col-md-3">
                 <div class="case-study-step-header">
@@ -265,7 +331,7 @@
           </div>
 
           <!-- Ideate & Brainstorm -->
-          <div class="case-study-step case-study-step-bg-light">
+          <div class="case-study-step case-study-step-bg-light" id="develop">
             <div class="row">
               <div class="col-xs-12 col-md-3">
                 <div class="case-study-step-header">
@@ -330,7 +396,7 @@
           </div>
 
           <!-- High-Fidelity Prototype -->
-          <div class="case-study-step">
+          <div class="case-study-step" id="deliver">
             <div class="row">
               <div class="col-xs-12 col-md-3">
                 <div class="case-study-step-header">
@@ -353,7 +419,7 @@
           </div>
 
           <!-- Conclusion -->
-          <div class="case-study-step case-study-step-bg-dark case-study-step-conclusion case-study-step-reflection">
+          <div class="case-study-step case-study-step-bg-dark case-study-step-conclusion case-study-step-reflection" id="reflection">
             <!-- Toggle Header -->
             <div class="reflection-toggle" onclick="toggleReflection(this)">
               <div class="reflection-toggle-left">
@@ -440,6 +506,105 @@
       }, 100);
     }
   }
+
+  // Reading Progress Indicator
+  const progressFill = document.getElementById('progressFill');
+  const progressNav = document.getElementById('progressNav');
+  const scrollToTop = document.getElementById('scrollToTop');
+  const progressNavItems = document.querySelectorAll('.progress-nav-item');
+
+  // Update progress bar on scroll
+  function updateProgressBar() {
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
+    
+    if (progressFill) {
+      progressFill.style.width = scrollPercent + '%';
+    }
+
+    // Show/hide progress nav and scroll to top button
+    if (scrollTop > 400) {
+      progressNav?.classList.add('visible');
+      scrollToTop?.classList.add('visible');
+    } else {
+      progressNav?.classList.remove('visible');
+      scrollToTop?.classList.remove('visible');
+    }
+
+    // Update active section in nav
+    updateActiveSection();
+  }
+
+  // Update active section based on scroll position
+  function updateActiveSection() {
+    const sections = ['overview', 'discover', 'research', 'define', 'develop', 'deliver', 'reflection'];
+    let currentSection = '';
+
+    sections.forEach(sectionId => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        const offset = 200; // Offset from top to trigger active state
+        
+        if (rect.top <= offset && rect.bottom >= offset) {
+          currentSection = sectionId;
+        }
+      }
+    });
+
+    // Update active state in nav
+    progressNavItems.forEach(item => {
+      if (item.dataset.section === currentSection) {
+        item.classList.add('active');
+      } else {
+        item.classList.remove('active');
+      }
+    });
+  }
+
+  // Click handlers for progress nav
+  progressNavItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const sectionId = item.dataset.section;
+      const section = document.getElementById(sectionId);
+      
+      if (section) {
+        const offset = 100;
+        const elementPosition = section.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: elementPosition - offset,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // Scroll to top handler
+  if (scrollToTop) {
+    scrollToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  // Throttled scroll event
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateProgressBar();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  // Initial update
+  updateProgressBar();
 </script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
