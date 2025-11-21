@@ -10078,3 +10078,181 @@ textarea {
     min-height: 300px;
   }
 }
+
+/* ============================================
+   REFLECTION SECTION - Enhanced Design
+   Black & White Aesthetic
+   ============================================ */
+
+.case-study-step-reflection {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%) !important;
+  color: #fff !important;
+  padding: 100px 60px !important;
+  margin: 100px 0 !important;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+/* Subtle pattern overlay */
+.case-study-step-reflection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.02) 49%, rgba(255,255,255,0.02) 51%, transparent 52%),
+    linear-gradient(-45deg, transparent 48%, rgba(255,255,255,0.02) 49%, rgba(255,255,255,0.02) 51%, transparent 52%);
+  background-size: 30px 30px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Content wrapper for better control */
+.case-study-step-reflection .row {
+  position: relative;
+  z-index: 1;
+}
+
+/* Label styling */
+.case-study-step-reflection .case-study-step-label {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px !important;
+  text-transform: uppercase !important;
+  color: #999 !important;
+  margin-bottom: 15px !important;
+  display: inline-block !important;
+  padding: 8px 16px !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 2px !important;
+}
+
+/* Heading styling */
+.case-study-step-reflection h2 {
+  font-size: 48px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  margin-bottom: 40px !important;
+  letter-spacing: -2px !important;
+  line-height: 1.2 !important;
+  position: relative !important;
+  padding-bottom: 25px !important;
+}
+
+/* Decorative underline */
+.case-study-step-reflection h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #fff 0%, transparent 100%);
+}
+
+/* Paragraph styling */
+.case-study-step-reflection p {
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+  color: #d0d0d0 !important;
+  margin-bottom: 30px !important;
+  font-weight: 400 !important;
+}
+
+/* Strong text */
+.case-study-step-reflection strong {
+  color: #fff !important;
+  font-weight: 600 !important;
+}
+
+/* List styling if present */
+.case-study-step-reflection ul,
+.case-study-step-reflection ol {
+  margin: 30px 0 !important;
+  padding-left: 30px !important;
+}
+
+.case-study-step-reflection li {
+  color: #d0d0d0 !important;
+  margin-bottom: 15px !important;
+  font-size: 17px !important;
+  line-height: 1.7 !important;
+}
+
+/* Image styling in reflection */
+.case-study-step-reflection img {
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .case-study-step-reflection {
+    padding: 80px 40px !important;
+    margin: 80px 0 !important;
+  }
+
+  .case-study-step-reflection h2 {
+    font-size: 36px !important;
+    margin-bottom: 30px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .case-study-step-reflection p {
+    font-size: 17px !important;
+    margin-bottom: 25px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .case-study-step-reflection {
+    padding: 60px 30px !important;
+    margin: 60px 0 !important;
+  }
+
+  .case-study-step-reflection h2 {
+    font-size: 28px !important;
+    margin-bottom: 25px !important;
+    padding-bottom: 15px !important;
+    letter-spacing: -1px !important;
+  }
+
+  .case-study-step-reflection h2::after {
+    width: 60px;
+    height: 2px;
+  }
+
+  .case-study-step-reflection p {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    margin-bottom: 20px !important;
+  }
+
+  .case-study-step-reflection .case-study-step-label {
+    font-size: 10px !important;
+    letter-spacing: 2px !important;
+    padding: 6px 12px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .case-study-step-reflection {
+    padding: 50px 20px !important;
+    margin: 50px 0 !important;
+  }
+
+  .case-study-step-reflection h2 {
+    font-size: 24px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .case-study-step-reflection p {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
+}

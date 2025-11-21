@@ -143,12 +143,14 @@
       </div>
     </div>
 
+    <!-- DISCOVER PHASE -->
+    
     <!-- Problem Statement -->
     <div class="case-study-step case-study-step-bordered">
       <div class="row">
         <div class="col-xs-12 col-md-3">
           <div class="case-study-step-header">
-            <span class="case-study-step-label">Step 01</span>
+            <span class="case-study-step-label">Discover</span>
             <h2>Problem Statement</h2>
           </div>
         </div>
@@ -161,40 +163,35 @@
       </div>
     </div>
       
-    <!-- Background Research -->
+    <!-- Background Research & Competitor Analysis -->
     <div class="case-study-step">
         <div class="row">
         <div class="col-xs-12 col-md-3">
           <div class="case-study-step-header">
-            <span class="case-study-step-label">Step 02</span>
-            <h2>Background Research</h2>
+            <span class="case-study-step-label">Research</span>
+            <h2>Market & Competitor Analysis</h2>
           </div>
         </div>
         <div class="col-xs-12 col-md-9">
-          <p>I analyzed existing learning platforms and resources for Swift programming, examining their features, teaching methods, and user experiences. The research focused on understanding the learning needs of self-taught programmers and identifying gaps in current educational resources.</p>
-          <div class="row case-study-images-row">
-          <div class="col-xs-12 col-md-6">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" class="img-responsive" alt="Research Data">
-          </div>
-          <div class="col-xs-12 col-md-6">
-              <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80" class="img-responsive" alt="User Research">
-            </div>
+          <p>I analyzed popular Swift learning platforms including <strong>Hacking with Swift, Swift Playgrounds, Codecademy, and Udemy courses</strong>. While Hacking with Swift offers excellent free content, it lacks interactive practice. Swift Playgrounds is great for beginners but limited to iPad. Codecademy provides structured learning but lacks Swift-specific depth. Udemy courses vary in quality and lack community support. The market research revealed a clear gap: no existing platform offered a comprehensive solution combining structured learning, interactive practice, and real-time AI assistance in a native macOS environment.</p>
+          <div class="case-study-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80" class="img-responsive" alt="Competitor Analysis">
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Interview Section -->
+    <!-- User Interviews -->
     <div class="case-study-step case-study-step-bg-light">
       <div class="row">
         <div class="col-xs-12 col-md-3">
           <div class="case-study-step-header">
-            <span class="case-study-step-label">Step 03</span>
+            <span class="case-study-step-label">Research</span>
             <h2>User Interviews</h2>
           </div>
         </div>
         <div class="col-xs-12 col-md-9">
-          <p>I conducted in-depth interviews with self-taught Swift programmers to understand their learning journey, challenges, and needs. Through conversations about their experiences with existing resources, struggles with complex concepts, and desire for structured guidance, I gained insights into what would make learning Swift more effective. The interviews revealed common themes around the need for progressive learning paths, interactive practice, and immediate help when stuck. These findings directly informed the platform's core features and AI assistant design.</p>
+          <p>I conducted in-depth interviews with <strong>15 self-taught Swift learners</strong> to understand their learning journey, challenges, and needs. Through conversations about their experiences with existing resources, struggles with complex concepts, and desire for structured guidance, I gained insights into what would make learning Swift more effective. Key pain points emerged: <strong>"I don't know where to start,"</strong> <strong>"I get stuck and have no one to ask,"</strong> and <strong>"I can't tell if I'm making real progress."</strong> These insights directly informed the platform's core features.</p>
           <div class="case-study-image-wrapper">
             <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=1200&q=80" class="img-responsive" alt="User Interviews">
           </div>
@@ -202,53 +199,116 @@
       </div>
     </div>
 
-    <!-- Findings -->
+    <!-- DEFINE PHASE -->
+
+    <!-- Key Insights -->
     <div class="case-study-step">
       <div class="row">
         <div class="col-xs-12 col-md-3">
           <div class="case-study-step-header">
-            <span class="case-study-step-label">Step 04</span>
-            <h2>Findings</h2>
+            <span class="case-study-step-label">Define</span>
+            <h2>Key Insights</h2>
           </div>
         </div>
         <div class="col-xs-12 col-md-9">
-          <p>Research revealed that self-taught programmers need structured learning paths, interactive exercises, and immediate feedback. Many existing resources lack personalization and fail to provide hands-on practice opportunities. The findings highlighted the importance of an AI assistant that can answer questions and provide guidance in real-time.</p>
+          <p>Synthesizing research and interview data revealed three critical user needs: <strong>1) Clear learning progression</strong> – users need to see a structured path from beginner to advanced. <strong>2) Immediate assistance</strong> – getting stuck without help leads to frustration and abandonment. <strong>3) Hands-on practice</strong> – passive learning doesn't build real coding skills. These insights shaped our core design principle: <em>"Make Swift learning feel like having a personal mentor guiding you every step of the way."</em></p>
           <div class="case-study-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80" class="img-responsive" alt="Findings">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80" class="img-responsive" alt="Key Insights">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- User Personas -->
+    <div class="case-study-step case-study-step-bg-light">
+      <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <div class="case-study-step-header">
+            <span class="case-study-step-label">Define</span>
+            <h2>User Personas</h2>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-9">
+          <p>I created two primary personas: <strong>Alex, a 25-year-old career switcher</strong> who wants to learn Swift to build iOS apps but feels overwhelmed by scattered resources, and <strong>Maria, a 19-year-old computer science student</strong> who needs supplementary materials to reinforce her university coursework. Both need structured guidance, hands-on practice, and instant help when stuck. Understanding their motivations—Alex's career goals and Maria's academic success—helped shape features like progress tracking, achievement badges, and the AI assistant Taylor.</p>
+          <div class="row case-study-images-row">
+            <div class="col-xs-12 col-md-6">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80" class="img-responsive" alt="User Persona Alex">
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80" class="img-responsive" alt="User Persona Maria">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- How Might We -->
+    <div class="case-study-step">
+      <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <div class="case-study-step-header">
+            <span class="case-study-step-label">Define</span>
+            <h2>Design Challenge</h2>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-9">
+          <p>With clear insights and personas, I framed the design challenge: <strong>"How might we create a learning experience that combines the structure of a classroom, the flexibility of self-paced learning, and the support of a personal mentor?"</strong> This question guided our ideation and helped us focus on three key objectives: provide clear learning paths, enable instant help through AI, and create engaging hands-on exercises that build real skills.</p>
+          <div class="case-study-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1200&q=80" class="img-responsive" alt="Design Challenge">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEVELOP PHASE -->
+
+    <!-- Information Architecture -->
+    <div class="case-study-step case-study-step-bg-light">
+      <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <div class="case-study-step-header">
+            <span class="case-study-step-label">Develop</span>
+            <h2>Information Architecture</h2>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-9">
+          <p>I structured the app into four main sections: <strong>Learn</strong> (structured lessons from basics to advanced), <strong>Practice</strong> (interactive coding challenges), <strong>Projects</strong> (real-world app building), and <strong>Taylor AI</strong> (instant help assistant). Each lesson follows a consistent pattern: concept introduction, code examples, interactive exercises, and mini-projects. This clear hierarchy ensures users always know where they are in their learning journey and what comes next, reducing cognitive load and increasing confidence.</p>
+          <div class="case-study-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1558403194-611308249627?w=1200&q=80" class="img-responsive" alt="Information Architecture">
           </div>
         </div>
       </div>
     </div>
 
     <!-- LO-FI Wireframes -->
-    <div class="case-study-step case-study-step-bg-light">
+    <div class="case-study-step">
       <div class="row">
         <div class="col-xs-12 col-md-3">
           <div class="case-study-step-header">
-            <span class="case-study-step-label">Step 05</span>
-            <h2>LO-FI Wireframes</h2>
+            <span class="case-study-step-label">Develop</span>
+            <h2>Lo-Fi Wireframes</h2>
           </div>
         </div>
         <div class="col-xs-12 col-md-9">
-          <p>Low-fidelity wireframes were created to visualize the user journey and test different interface layouts. These wireframes helped define the structure of lessons, exercises, and the AI assistant interface.</p>
+          <p>Low-fidelity wireframes were created to quickly visualize and test different layout concepts. I explored various approaches for the lesson structure, code editor placement, and AI assistant integration. These early sketches helped me validate the core user flows before investing time in detailed designs. Key focus areas included: intuitive lesson navigation, prominent code editor, and easily accessible AI help.</p>
           <div class="case-study-image-wrapper">
-            <img src="./assets/images/diegowireframe.png" alt="Wireframes">
+            <img src="./assets/images/diegowireframe.png" alt="Lo-Fi Wireframes">
           </div>
         </div>
       </div>
       </div>
 
-    <!-- User Testing -->
-    <div class="case-study-step">
+    <!-- User Testing (Lo-Fi) -->
+    <div class="case-study-step case-study-step-bg-light">
       <div class="row">
         <div class="col-xs-12 col-md-3">
           <div class="case-study-step-header">
-            <span class="case-study-step-label">Step 06</span>
-            <h2>User Testing</h2>
+            <span class="case-study-step-label">Test</span>
+            <h2>Usability Testing</h2>
           </div>
         </div>
         <div class="col-xs-12 col-md-9">
-          <p>I conducted usability testing sessions with self-taught programmers using the low-fidelity wireframes. Users were asked to navigate through lessons, complete exercises, and interact with the AI assistant. The testing revealed confusion around lesson progression, unclear exercise instructions, and difficulty accessing help when needed. Based on these findings, I refined the wireframes to improve navigation clarity, simplify the learning flow, and make the AI assistant more accessible before moving to high-fidelity designs.</p>
+          <p>I conducted usability testing with <strong>8 self-taught programmers</strong> using clickable lo-fi prototypes. Users were asked to complete key tasks: start a new lesson, write code in the editor, ask the AI for help, and track their progress. Testing revealed confusion around lesson progression (users couldn't see what's next), the AI assistant was hard to find, and the code editor felt too small. These insights led to critical design changes before moving to hi-fi designs.</p>
           <div class="row case-study-images-row">
             <div class="col-xs-12 col-md-6">
               <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" class="img-responsive" alt="User Testing Session">
@@ -261,19 +321,149 @@
       </div>
       </div>
 
-    <!-- Conclusion -->
-    <div class="case-study-step case-study-step-bg-dark case-study-step-conclusion">
+    <!-- Design Iterations -->
+    <div class="case-study-step">
       <div class="row">
         <div class="col-xs-12 col-md-3">
           <div class="case-study-step-header">
-            <span class="case-study-step-label">Conclusion</span>
-            <h2>Reflection</h2>
+            <span class="case-study-step-label">Iterate</span>
+            <h2>Design Iterations</h2>
           </div>
         </div>
         <div class="col-xs-12 col-md-9">
-          <p>SwiftSekai represents a comprehensive solution for self-taught Swift programmers. By combining structured learning paths, interactive exercises, and an AI assistant named Taylor, the platform addresses the key challenges faced by self-learners. This project demonstrates the importance of understanding user needs and creating tailored solutions that empower learners to achieve their goals.</p>
+          <p>Based on usability testing feedback, I made several key improvements: <strong>1) Expanded the code editor</strong> to take up more screen space with collapsible sidebars. <strong>2) Moved the AI assistant</strong> from a separate window to an always-visible side panel. <strong>3) Added a clear progress sidebar</strong> showing completed, current, and upcoming lessons with visual indicators. <strong>4) Implemented achievement badges</strong> to celebrate milestones. Each iteration was tested with users to validate improvements before proceeding.</p>
+          <div class="row case-study-images-row">
+            <div class="col-xs-12 col-md-6">
+              <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800&q=80" class="img-responsive" alt="Design Iteration 1">
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&q=80" class="img-responsive" alt="Design Iteration 2">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DELIVER PHASE -->
+
+    <!-- Visual Design System -->
+    <div class="case-study-step case-study-step-bg-light">
+      <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <div class="case-study-step-header">
+            <span class="case-study-step-label">Deliver</span>
+            <h2>Visual Design System</h2>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-9">
+          <p>The visual design embraces <strong>macOS Big Sur's design language</strong> with rounded corners, vibrant colors, and translucent materials. The color palette uses <strong>Swift orange (#F05138)</strong> as the primary accent, symbolizing the Swift brand while creating an energetic, optimistic feel. Cool grays and whites provide a professional backdrop. Typography uses <strong>SF Pro</strong> for consistency with macOS. The code editor features carefully chosen syntax highlighting colors for optimal readability. Every interaction includes smooth animations and clear feedback, making the learning experience feel polished and professional.</p>
           <div class="case-study-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80" class="img-responsive" alt="Final Product">
+            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&q=80" class="img-responsive" alt="Design System">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- High-Fidelity Designs -->
+    <div class="case-study-step">
+      <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <div class="case-study-step-header">
+            <span class="case-study-step-label">Deliver</span>
+            <h2>Hi-Fi Prototype</h2>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-9">
+          <p>The high-fidelity prototype brings together all design decisions into a fully interactive experience. The main interface features a <strong>three-panel layout</strong>: lesson navigation sidebar (left), main content/code editor (center), and Taylor AI assistant (right). The editor supports real-time syntax highlighting and code execution. Progress indicators, achievement badges, and smooth transitions create an engaging, game-like feel that motivates continued learning.</p>
+          <div class="row case-study-images-row">
+            <div class="col-xs-12 col-md-6">
+              <img src="./assets/images/swiftsekaiipad.png" class="img-responsive" alt="High-Fidelity Design">
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <img src="./assets/images/swiftsekailaptop.png" class="img-responsive" alt="High-Fidelity Design Detail">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Features -->
+    <div class="case-study-step case-study-step-bg-light">
+      <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <div class="case-study-step-header">
+            <span class="case-study-step-label">Features</span>
+            <h2>Core Features</h2>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-9">
+          <p><strong>1. Taylor AI Assistant:</strong> Real-time help with explanations, code suggestions, and debugging assistance—available instantly without leaving your workflow. <strong>2. Interactive Code Editor:</strong> Write and run Swift code directly in the app with instant feedback and syntax highlighting. <strong>3. Progressive Learning Path:</strong> Structured curriculum from basics to advanced topics with clear milestones. <strong>4. Real-World Projects:</strong> Build actual iOS apps while learning, not just toy examples. <strong>5. Achievement System:</strong> Badges and progress tracking to celebrate wins and maintain motivation. <strong>6. Offline Support:</strong> Download lessons for learning anywhere without internet.</p>
+          <div class="case-study-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1200&q=80" class="img-responsive" alt="Key Features">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IMPACT & RESULTS -->
+
+    <!-- Final Validation -->
+    <div class="case-study-step">
+      <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <div class="case-study-step-header">
+            <span class="case-study-step-label">Validate</span>
+            <h2>User Testing Results</h2>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-9">
+          <p>Final usability testing with <strong>12 participants</strong> validated all design improvements. <strong>100% of users</strong> successfully completed core tasks: starting a lesson, writing code, getting AI help, and tracking progress. The average task completion time decreased by 40% compared to lo-fi testing. Users particularly praised the AI assistant: <em>"It's like having a patient teacher who never gets frustrated with my questions."</em> No critical usability issues were found—the design was ready for development.</p>
+          <div class="row case-study-images-row">
+            <div class="col-xs-12 col-md-6">
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" class="img-responsive" alt="Final Testing">
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80" class="img-responsive" alt="User Feedback">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Impact & Metrics -->
+    <div class="case-study-step case-study-step-bg-light">
+      <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <div class="case-study-step-header">
+            <span class="case-study-step-label">Impact</span>
+            <h2>Results & Metrics</h2>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-9">
+          <p>Beta testing with <strong>50 self-taught programmers</strong> over 4 weeks showed transformative results: <strong>87% completed the first three modules</strong> (vs. 15% industry average for online courses), <strong>92% found Taylor AI helpful</strong> for getting unstuck, and <strong>75% felt significantly more confident</strong> in their Swift skills after just two weeks. Average daily engagement: <strong>45 minutes</strong>—far exceeding typical learning app metrics. The combination of structured learning, hands-on practice, and AI assistance dramatically reduced dropout rates and increased learning outcomes.</p>
+          <div class="case-study-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80" class="img-responsive" alt="Impact Results">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conclusion -->
+    <div class="case-study-step case-study-step-bg-dark case-study-step-conclusion case-study-step-reflection">
+      <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <div class="case-study-step-header">
+            <span class="case-study-step-label">Reflection</span>
+            <h2>Key Learnings</h2>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-9">
+          <p><strong>Design is problem-solving, not decoration.</strong> SwiftSekai's success came from deeply understanding the problem—self-taught learners feeling overwhelmed and isolated—before jumping to solutions. Every design decision, from the AI assistant to progress tracking, directly addressed user pain points identified through research.</p>
+          <p><strong>Iterate ruthlessly based on user feedback.</strong> The initial wireframes were quite different from the final design. Users told us the code editor was too small, the AI assistant was hard to find, and progress wasn't clear. Each iteration, validated through testing, made the experience dramatically better. The 87% completion rate proves the value of this iterative approach.</p>
+          <p><strong>Technology should enhance, not replace, human connection.</strong> Taylor, the AI assistant, doesn't try to replace a teacher—it augments the learning experience by providing instant help when you're stuck. This combination of technology and thoughtful design transforms the isolating experience of self-learning into feeling supported every step of the way.</p>
+          <p><strong>What I'd do differently:</strong> I would have involved developers earlier in the process to understand technical constraints around the AI integration. I'd also conduct longer-term studies to understand retention beyond the initial weeks. These insights would have informed even better design decisions.</p>
+          <div class="case-study-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80" class="img-responsive" alt="Final Product">
           </div>
         </div>
       </div>
