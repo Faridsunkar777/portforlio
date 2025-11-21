@@ -253,17 +253,38 @@
 
     <!-- Conclusion -->
     <div class="case-study-step case-study-step-bg-dark case-study-step-conclusion case-study-step-reflection">
-      <div class="row">
-        <div class="col-xs-12 col-md-3">
-          <div class="case-study-step-header">
-            <span class="case-study-step-label">Reflection</span>
-            <h2>Reflection</h2>
+      <!-- Toggle Header -->
+      <div class="reflection-toggle" onclick="toggleReflection(this)">
+        <div class="reflection-toggle-left">
+          <div class="reflection-toggle-icon">
+            <i class="fa fa-lightbulb-o"></i>
+          </div>
+          <div class="reflection-toggle-text">
+            <h2>Key Reflections & Learnings</h2>
+            <p>Click to explore the insights and lessons from this project</p>
           </div>
         </div>
-        <div class="col-xs-12 col-md-9">
-          <p>Through an iterative design process, I developed MONOS, a comprehensive Islamic hub that helps users learn about Islamic faith and culture. The app features structured learning paths, interactive content, and accessible information that makes exploring Islamic teachings engaging and user-friendly.</p>
-          <div class="case-study-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80" class="img-responsive" alt="Final Product">
+        <div class="reflection-arrow">
+          <i class="fa fa-chevron-down"></i>
+        </div>
+      </div>
+      
+      <!-- Collapsible Content -->
+      <div class="reflection-content">
+        <div class="reflection-content-inner">
+          <div class="row">
+            <div class="col-xs-12 col-md-3">
+              <div class="case-study-step-header">
+                <span class="case-study-step-label">Reflection</span>
+                <h2>Reflection</h2>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-9">
+              <p>Through an iterative design process, I developed MONOS, a comprehensive Islamic hub that helps users learn about Islamic faith and culture. The app features structured learning paths, interactive content, and accessible information that makes exploring Islamic teachings engaging and user-friendly.</p>
+              <div class="case-study-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80" class="img-responsive" alt="Final Product">
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -295,6 +316,24 @@
   document.addEventListener("DOMContentLoaded", function (event) {
      navActivePage();
   });
+
+  // Reflection Toggle Function
+  function toggleReflection(element) {
+    const reflectionSection = element.closest('.case-study-step-reflection');
+    reflectionSection.classList.toggle('active');
+    
+    // Add smooth scroll to reveal content
+    if (reflectionSection.classList.contains('active')) {
+      setTimeout(() => {
+        const offset = 100;
+        const elementPosition = reflectionSection.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: elementPosition - offset,
+          behavior: 'smooth'
+        });
+      }, 100);
+    }
+  }
 </script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID 

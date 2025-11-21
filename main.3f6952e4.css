@@ -10087,13 +10087,125 @@ textarea {
 .case-study-step-reflection {
   background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%) !important;
   color: #fff !important;
-  padding: 100px 60px !important;
+  padding: 0 !important;
   margin: 100px 0 !important;
   position: relative;
   overflow: hidden;
   border: 1px solid #333;
   border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reflection Toggle Header */
+.reflection-toggle {
+  cursor: pointer;
+  padding: 50px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.reflection-toggle:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.reflection-toggle-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex: 1;
+}
+
+.reflection-toggle-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reflection-toggle:hover .reflection-toggle-icon {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+.reflection-toggle-text h2 {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 36px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  letter-spacing: -1px !important;
+}
+
+.reflection-toggle-text h2::after {
+  display: none !important;
+}
+
+.reflection-toggle-text p {
+  margin: 8px 0 0 0 !important;
+  padding: 0 !important;
+  font-size: 15px !important;
+  color: #999 !important;
+  font-weight: 400 !important;
+}
+
+.reflection-arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+}
+
+.reflection-toggle:hover .reflection-arrow {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.case-study-step-reflection.active .reflection-arrow {
+  transform: rotate(180deg);
+}
+
+/* Reflection Content */
+.reflection-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.4s ease,
+              padding 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  padding: 0 60px;
+}
+
+.case-study-step-reflection.active .reflection-content {
+  max-height: 5000px;
+  opacity: 1;
+  padding: 0 60px 80px 60px;
+}
+
+.reflection-content-inner {
+  transform: translateY(-20px);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+}
+
+.case-study-step-reflection.active .reflection-content-inner {
+  transform: translateY(0);
 }
 
 /* Subtle pattern overlay */
@@ -10194,9 +10306,44 @@ textarea {
 /* Responsive Design */
 @media (max-width: 991px) {
   .case-study-step-reflection {
-    padding: 80px 40px !important;
     margin: 80px 0 !important;
     border-radius: 14px;
+  }
+
+  .reflection-toggle {
+    padding: 40px 40px;
+  }
+
+  .reflection-toggle-left {
+    gap: 20px;
+  }
+
+  .reflection-toggle-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .reflection-toggle-text h2 {
+    font-size: 28px !important;
+  }
+
+  .reflection-toggle-text p {
+    font-size: 14px !important;
+  }
+
+  .reflection-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .reflection-content {
+    padding: 0 40px;
+  }
+
+  .case-study-step-reflection.active .reflection-content {
+    padding: 0 40px 60px 40px;
   }
 
   .case-study-step-reflection h2 {
@@ -10213,9 +10360,49 @@ textarea {
 
 @media (max-width: 767px) {
   .case-study-step-reflection {
-    padding: 60px 30px !important;
     margin: 60px 0 !important;
     border-radius: 12px;
+  }
+
+  .reflection-toggle {
+    padding: 35px 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .reflection-toggle-left {
+    width: 100%;
+    gap: 15px;
+  }
+
+  .reflection-toggle-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .reflection-toggle-text h2 {
+    font-size: 24px !important;
+  }
+
+  .reflection-toggle-text p {
+    font-size: 13px !important;
+  }
+
+  .reflection-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    align-self: center;
+  }
+
+  .reflection-content {
+    padding: 0 30px;
+  }
+
+  .case-study-step-reflection.active .reflection-content {
+    padding: 0 30px 50px 30px;
   }
 
   .case-study-step-reflection h2 {
@@ -10245,9 +10432,40 @@ textarea {
 
 @media (max-width: 480px) {
   .case-study-step-reflection {
-    padding: 50px 20px !important;
     margin: 50px 0 !important;
     border-radius: 10px;
+  }
+
+  .reflection-toggle {
+    padding: 30px 20px;
+  }
+
+  .reflection-toggle-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .reflection-toggle-text h2 {
+    font-size: 20px !important;
+  }
+
+  .reflection-toggle-text p {
+    font-size: 12px !important;
+  }
+
+  .reflection-arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .reflection-content {
+    padding: 0 20px;
+  }
+
+  .case-study-step-reflection.active .reflection-content {
+    padding: 0 20px 40px 20px;
   }
 
   .case-study-step-reflection h2 {

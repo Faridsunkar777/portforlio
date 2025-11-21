@@ -450,20 +450,41 @@
 
     <!-- Conclusion -->
     <div class="case-study-step case-study-step-bg-dark case-study-step-conclusion case-study-step-reflection">
-      <div class="row">
-        <div class="col-xs-12 col-md-3">
-          <div class="case-study-step-header">
-            <span class="case-study-step-label">Reflection</span>
-            <h2>Key Learnings</h2>
+      <!-- Toggle Header -->
+      <div class="reflection-toggle" onclick="toggleReflection(this)">
+        <div class="reflection-toggle-left">
+          <div class="reflection-toggle-icon">
+            <i class="fa fa-lightbulb-o"></i>
+          </div>
+          <div class="reflection-toggle-text">
+            <h2>Key Reflections & Learnings</h2>
+            <p>Click to explore the insights and lessons from this project</p>
           </div>
         </div>
-        <div class="col-xs-12 col-md-9">
-          <p><strong>Design is problem-solving, not decoration.</strong> SwiftSekai's success came from deeply understanding the problem—self-taught learners feeling overwhelmed and isolated—before jumping to solutions. Every design decision, from the AI assistant to progress tracking, directly addressed user pain points identified through research.</p>
-          <p><strong>Iterate ruthlessly based on user feedback.</strong> The initial wireframes were quite different from the final design. Users told us the code editor was too small, the AI assistant was hard to find, and progress wasn't clear. Each iteration, validated through testing, made the experience dramatically better. The 87% completion rate proves the value of this iterative approach.</p>
-          <p><strong>Technology should enhance, not replace, human connection.</strong> Taylor, the AI assistant, doesn't try to replace a teacher—it augments the learning experience by providing instant help when you're stuck. This combination of technology and thoughtful design transforms the isolating experience of self-learning into feeling supported every step of the way.</p>
-          <p><strong>What I'd do differently:</strong> I would have involved developers earlier in the process to understand technical constraints around the AI integration. I'd also conduct longer-term studies to understand retention beyond the initial weeks. These insights would have informed even better design decisions.</p>
-          <div class="case-study-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80" class="img-responsive" alt="Final Product">
+        <div class="reflection-arrow">
+          <i class="fa fa-chevron-down"></i>
+        </div>
+      </div>
+      
+      <!-- Collapsible Content -->
+      <div class="reflection-content">
+        <div class="reflection-content-inner">
+          <div class="row">
+            <div class="col-xs-12 col-md-3">
+              <div class="case-study-step-header">
+                <span class="case-study-step-label">Reflection</span>
+                <h2>Key Learnings</h2>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-9">
+              <p><strong>Design is problem-solving, not decoration.</strong> SwiftSekai's success came from deeply understanding the problem—self-taught learners feeling overwhelmed and isolated—before jumping to solutions. Every design decision, from the AI assistant to progress tracking, directly addressed user pain points identified through research.</p>
+              <p><strong>Iterate ruthlessly based on user feedback.</strong> The initial wireframes were quite different from the final design. Users told us the code editor was too small, the AI assistant was hard to find, and progress wasn't clear. Each iteration, validated through testing, made the experience dramatically better. The 87% completion rate proves the value of this iterative approach.</p>
+              <p><strong>Technology should enhance, not replace, human connection.</strong> Taylor, the AI assistant, doesn't try to replace a teacher—it augments the learning experience by providing instant help when you're stuck. This combination of technology and thoughtful design transforms the isolating experience of self-learning into feeling supported every step of the way.</p>
+              <p><strong>What I'd do differently:</strong> I would have involved developers earlier in the process to understand technical constraints around the AI integration. I'd also conduct longer-term studies to understand retention beyond the initial weeks. These insights would have informed even better design decisions.</p>
+              <div class="case-study-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80" class="img-responsive" alt="Final Product">
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -494,6 +515,24 @@
   document.addEventListener("DOMContentLoaded", function (event) {
      navActivePage();
   });
+
+  // Reflection Toggle Function
+  function toggleReflection(element) {
+    const reflectionSection = element.closest('.case-study-step-reflection');
+    reflectionSection.classList.toggle('active');
+    
+    // Add smooth scroll to reveal content
+    if (reflectionSection.classList.contains('active')) {
+      setTimeout(() => {
+        const offset = 100;
+        const elementPosition = reflectionSection.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: elementPosition - offset,
+          behavior: 'smooth'
+        });
+      }, 100);
+    }
+  }
 </script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID 

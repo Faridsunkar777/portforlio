@@ -354,19 +354,40 @@
 
           <!-- Conclusion -->
           <div class="case-study-step case-study-step-bg-dark case-study-step-conclusion case-study-step-reflection">
-            <div class="row">
-              <div class="col-xs-12 col-md-3">
-                <div class="case-study-step-header">
-                  <span class="case-study-step-label">Reflection</span>
-                  <h2>Reflection</h2>
+            <!-- Toggle Header -->
+            <div class="reflection-toggle" onclick="toggleReflection(this)">
+              <div class="reflection-toggle-left">
+                <div class="reflection-toggle-icon">
+                  <i class="fa fa-lightbulb-o"></i>
+                </div>
+                <div class="reflection-toggle-text">
+                  <h2>Key Reflections & Learnings</h2>
+                  <p>Click to explore the insights and lessons from this project</p>
                 </div>
               </div>
-              <div class="col-xs-12 col-md-9">
-                <p>Reflecting on this project, it truly felt like embarking on a creative journey. I started with a simple question: how can we help people become more mindful of their screen time? Along the way, I experimented with techniques like Crazy 8s, letting my ideas flow freely on paper as I imagined how users might interact with Luna. Through user interviews, I began to understand real stories — the struggles, motivations, and daily routines that shaped people's habits.</p>
-                <p>Diving into competitor analysis felt like mapping out the landscape and learning what others had built, and what gaps still needed to be filled. Building out personas and mapping user journeys brought the project to life for me, as I could better empathize with our users and see Luna through their eyes. Usability testing sessions then brought valuable feedback, showing where things clicked and where changes were needed to make the app welcoming and intuitive.</p>
-                <p>Each step, from sketches to high-fidelity prototypes, added a new layer to Luna’s story, teaching me not just about design processes but about the people for whom we design. Ultimately, Luna became more than just a functional tool — it transformed into an experience that was engaging, friendly, and genuinely useful. This journey reminded me that thoughtful design, continuous iteration, and empathy are at the heart of creating products that truly make a difference.</p>
-                <div class="case-study-image-wrapper">
-                  <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80" class="img-responsive" alt="Final Product">
+              <div class="reflection-arrow">
+                <i class="fa fa-chevron-down"></i>
+              </div>
+            </div>
+            
+            <!-- Collapsible Content -->
+            <div class="reflection-content">
+              <div class="reflection-content-inner">
+                <div class="row">
+                  <div class="col-xs-12 col-md-3">
+                    <div class="case-study-step-header">
+                      <span class="case-study-step-label">Reflection</span>
+                      <h2>Reflection</h2>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-md-9">
+                    <p>Reflecting on this project, it truly felt like embarking on a creative journey. I started with a simple question: how can we help people become more mindful of their screen time? Along the way, I experimented with techniques like Crazy 8s, letting my ideas flow freely on paper as I imagined how users might interact with Luna. Through user interviews, I began to understand real stories — the struggles, motivations, and daily routines that shaped people's habits.</p>
+                    <p>Diving into competitor analysis felt like mapping out the landscape and learning what others had built, and what gaps still needed to be filled. Building out personas and mapping user journeys brought the project to life for me, as I could better empathize with our users and see Luna through their eyes. Usability testing sessions then brought valuable feedback, showing where things clicked and where changes were needed to make the app welcoming and intuitive.</p>
+                    <p>Each step, from sketches to high-fidelity prototypes, added a new layer to Luna's story, teaching me not just about design processes but about the people for whom we design. Ultimately, Luna became more than just a functional tool — it transformed into an experience that was engaging, friendly, and genuinely useful. This journey reminded me that thoughtful design, continuous iteration, and empathy are at the heart of creating products that truly make a difference.</p>
+                    <div class="case-study-image-wrapper">
+                      <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80" class="img-responsive" alt="Final Product">
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -401,6 +422,24 @@
   document.addEventListener("DOMContentLoaded", function (event) {
      navActivePage();
   });
+
+  // Reflection Toggle Function
+  function toggleReflection(element) {
+    const reflectionSection = element.closest('.case-study-step-reflection');
+    reflectionSection.classList.toggle('active');
+    
+    // Add smooth scroll to reveal content
+    if (reflectionSection.classList.contains('active')) {
+      setTimeout(() => {
+        const offset = 100;
+        const elementPosition = reflectionSection.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: elementPosition - offset,
+          behavior: 'smooth'
+        });
+      }, 100);
+    }
+  }
 </script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
