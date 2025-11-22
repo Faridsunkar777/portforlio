@@ -11120,3 +11120,28 @@ textarea {
   color: #ffffff;
   margin: 0;
 }
+
+/* Sticky Footer Styles */
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-container {
+  flex: 1;
+}
+
+.footer-container {
+  margin-top: auto;
+}
+
+.about-hero,
+.portfolio-works-section,
+.hero-full-container {
+  flex: 1;
+}
