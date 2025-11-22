@@ -24,6 +24,74 @@
 <div id="site-border-right"></div>
 <div id="site-border-top"></div>
 <div id="site-border-bottom"></div>
+
+<!-- Reading Progress Bar -->
+<div class="reading-progress-bar">
+  <div class="reading-progress-fill" id="progressFill"></div>
+</div>
+
+<!-- Project Progress Navigation -->
+<nav class="project-progress-nav" id="progressNav">
+  <div class="progress-nav-container">
+    <ul class="progress-nav-list">
+      <li class="progress-nav-item" data-section="overview">
+        <div class="progress-nav-dot" data-number="01"></div>
+        <div class="progress-nav-label">
+          <span class="progress-nav-stage">START</span>
+          <span class="progress-nav-title">Overview</span>
+        </div>
+      </li>
+      <li class="progress-nav-item" data-section="discover">
+        <div class="progress-nav-dot" data-number="02"></div>
+        <div class="progress-nav-label">
+          <span class="progress-nav-stage">DISCOVER</span>
+          <span class="progress-nav-title">Problem</span>
+        </div>
+      </li>
+      <li class="progress-nav-item" data-section="research">
+        <div class="progress-nav-dot" data-number="03"></div>
+        <div class="progress-nav-label">
+          <span class="progress-nav-stage">RESEARCH</span>
+          <span class="progress-nav-title">Insights</span>
+        </div>
+      </li>
+      <li class="progress-nav-item" data-section="define">
+        <div class="progress-nav-dot" data-number="04"></div>
+        <div class="progress-nav-label">
+          <span class="progress-nav-stage">DEFINE</span>
+          <span class="progress-nav-title">User Needs</span>
+        </div>
+      </li>
+      <li class="progress-nav-item" data-section="develop">
+        <div class="progress-nav-dot" data-number="05"></div>
+        <div class="progress-nav-label">
+          <span class="progress-nav-stage">DEVELOP</span>
+          <span class="progress-nav-title">Design</span>
+        </div>
+      </li>
+      <li class="progress-nav-item" data-section="deliver">
+        <div class="progress-nav-dot" data-number="06"></div>
+        <div class="progress-nav-label">
+          <span class="progress-nav-stage">DELIVER</span>
+          <span class="progress-nav-title">Solution</span>
+        </div>
+      </li>
+      <li class="progress-nav-item" data-section="reflection">
+        <div class="progress-nav-dot" data-number="07"></div>
+        <div class="progress-nav-label">
+          <span class="progress-nav-stage">REFLECT</span>
+          <span class="progress-nav-title">Learnings</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Scroll to Top Button -->
+<div class="scroll-to-top" id="scrollToTop">
+  <i class="fa fa-arrow-up"></i>
+</div>
+
 <!-- Add your content of header -->
 <header>
   <nav class="navbar  navbar-fixed-top navbar-default">
@@ -61,7 +129,7 @@
   </nav>
 </header>
 <!-- Project Hero Section -->
-<div class="project-hero-section">
+<div class="project-hero-section" id="overview">
   <div class="container-fluid project-hero-container">
     <!-- Project Header -->
     <div class="project-header">
@@ -110,7 +178,7 @@
   <div class="container-fluid project-hero-container">
     <div class="project-images-grid">
       <div class="project-image-item">
-        <a href="https://www.figma.com/proto/z2GozoRFmmTQpwpT6t6gNT/Farid-S-final-project?page-id=0%3A1&type=design&node-id=1-169&viewport=213%2C779%2C0.12&t=crlTbvbkK1KIq6Q4-1&scaling=scale-down&starting-point-node-id=1%3A44&mode=design" target="_blank" rel="noopener" class="project-image-link">
+        <a href="https://www.figma.com/proto/LMQGb5qB5d9GLBTQgKWTvi/Team-2-Challange-4--Copy-?page-id=252%3A1973&node-id=1064-3721&p=f&viewport=674%2C491%2C0.08&t=unbUBrdCJxCfdCWR-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=735%3A3465&show-proto-sidebar=1" target="_blank" rel="noopener" class="project-image-link">
           <div class="project-image-wrapper">
             <img src="./assets/images/swiftsekaiipad.png" alt="SwiftSekai App Screenshot">
             <div class="project-image-overlay">
@@ -120,7 +188,7 @@
         </a>
       </div>
       <div class="project-image-item">
-        <a href="https://www.figma.com/proto/z2GozoRFmmTQpwpT6t6gNT/Farid-S-final-project?page-id=0%3A1&type=design&node-id=1-169&viewport=213%2C779%2C0.12&t=crlTbvbkK1KIq6Q4-1&scaling=scale-down&starting-point-node-id=1%3A44&mode=design" target="_blank" rel="noopener" class="project-image-link">
+        <a href="https://www.figma.com/proto/LMQGb5qB5d9GLBTQgKWTvi/Team-2-Challange-4--Copy-?page-id=252%3A1973&node-id=1064-3721&p=f&viewport=674%2C491%2C0.08&t=unbUBrdCJxCfdCWR-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=735%3A3465&show-proto-sidebar=1" target="_blank" rel="noopener" class="project-image-link">
           <div class="project-image-wrapper">
             <img src="./assets/images/swiftsekailaptop.png" alt="SwiftSekai App Screenshot">
             <div class="project-image-overlay">
@@ -146,7 +214,7 @@
     <!-- DISCOVER PHASE -->
     
     <!-- Problem Statement -->
-    <div class="case-study-step case-study-step-bordered">
+    <div class="case-study-step case-study-step-bordered" id="discover">
       <div class="row">
         <div class="col-xs-12 col-md-3">
           <div class="case-study-step-header">
@@ -164,7 +232,7 @@
     </div>
       
     <!-- Background Research & Competitor Analysis -->
-    <div class="case-study-step">
+    <div class="case-study-step" id="research">
         <div class="row">
         <div class="col-xs-12 col-md-3">
           <div class="case-study-step-header">
@@ -202,7 +270,7 @@
     <!-- DEFINE PHASE -->
 
     <!-- Key Insights -->
-    <div class="case-study-step">
+    <div class="case-study-step" id="define">
       <div class="row">
         <div class="col-xs-12 col-md-3">
           <div class="case-study-step-header">
@@ -263,7 +331,7 @@
     <!-- DEVELOP PHASE -->
 
     <!-- Information Architecture -->
-    <div class="case-study-step case-study-step-bg-light">
+    <div class="case-study-step case-study-step-bg-light" id="develop">
       <div class="row">
         <div class="col-xs-12 col-md-3">
           <div class="case-study-step-header">
@@ -347,7 +415,7 @@
     <!-- DELIVER PHASE -->
 
     <!-- Visual Design System -->
-    <div class="case-study-step case-study-step-bg-light">
+    <div class="case-study-step case-study-step-bg-light" id="deliver">
       <div class="row">
         <div class="col-xs-12 col-md-3">
           <div class="case-study-step-header">
@@ -449,7 +517,7 @@
     </div>
 
     <!-- Conclusion -->
-    <div class="case-study-step case-study-step-bg-dark case-study-step-conclusion case-study-step-reflection">
+    <div class="case-study-step case-study-step-bg-dark case-study-step-conclusion case-study-step-reflection" id="reflection">
       <!-- Toggle Header -->
       <div class="reflection-toggle" onclick="toggleReflection(this)">
         <div class="reflection-toggle-left">
@@ -492,11 +560,18 @@
   </div>
 </div>
 
-<!-- Project Footer Image -->
-<div class="project-footer-image">
-  <div class="container-fluid project-hero-container">
-    <div class="project-footer-image-wrapper">
-      <img src="./assets/images/swiftsekaiipad.png" alt="SwiftSekai App">
+<!-- Hire Me CTA Section -->
+<div class="hire-me-cta-section">
+  <div class="container-fluid">
+    <div class="hire-me-cta-container">
+      <div class="hire-me-cta-content">
+        <h2 class="hire-me-title">Let's Work Together</h2>
+        <p class="hire-me-subtitle">Have a project in mind? I'd love to help bring your ideas to life.</p>
+        <a href="./contact.html" class="hire-me-btn">
+          <span>Hire Me</span>
+          <i class="fa fa-arrow-right"></i>
+        </a>
+      </div>
     </div>
   </div>
 </div>
@@ -533,6 +608,166 @@
       }, 100);
     }
   }
+
+  // Reading Progress Indicator
+  const progressFill = document.getElementById('progressFill');
+  const progressNav = document.getElementById('progressNav');
+  const scrollToTop = document.getElementById('scrollToTop');
+  const progressNavItems = document.querySelectorAll('.progress-nav-item');
+
+  // Update progress bar on scroll
+  function updateProgressBar() {
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
+    
+    if (progressFill) {
+      progressFill.style.width = scrollPercent + '%';
+    }
+
+    // Show/hide progress nav and scroll to top button
+    if (scrollTop > 400) {
+      progressNav?.classList.add('visible');
+      scrollToTop?.classList.add('visible');
+    } else {
+      progressNav?.classList.remove('visible');
+      scrollToTop?.classList.remove('visible');
+    }
+
+    // Update active section in nav
+    updateActiveSection();
+  }
+
+  // Update active section based on scroll position
+  function updateActiveSection() {
+    const sections = ['overview', 'discover', 'research', 'define', 'develop', 'deliver', 'reflection'];
+    let currentSection = '';
+    let maxProgress = 0;
+    const windowHeight = window.innerHeight;
+    const triggerPoint = windowHeight * 0.3; // 30% from top
+
+    // Find which section is most visible in the trigger area
+    sections.forEach(sectionId => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        const sectionTop = rect.top;
+        const sectionBottom = rect.bottom;
+        const sectionHeight = rect.height;
+        
+        // Calculate how much of the section is in the viewport
+        const visibleTop = Math.max(0, Math.min(sectionBottom, windowHeight) - Math.max(sectionTop, 0));
+        const visiblePercent = visibleTop / sectionHeight;
+        
+        // Check if section is in the trigger area
+        if (sectionTop <= triggerPoint && sectionBottom >= triggerPoint) {
+          currentSection = sectionId;
+        }
+        
+        // Track progress for visual line
+        if (sectionTop < triggerPoint) {
+          const sectionIndex = sections.indexOf(sectionId);
+          if (sectionIndex > maxProgress) {
+            maxProgress = sectionIndex;
+          }
+        }
+      }
+    });
+
+    // If no section in trigger area, use the closest one
+    if (!currentSection) {
+      let minDistance = Infinity;
+      sections.forEach(sectionId => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const distance = Math.abs(rect.top - triggerPoint);
+          if (distance < minDistance) {
+            minDistance = distance;
+            currentSection = sectionId;
+          }
+        }
+      });
+    }
+
+    // Update active state and passed state in nav
+    progressNavItems.forEach(item => {
+      const sectionId = item.dataset.section;
+      const sectionIndex = sections.indexOf(sectionId);
+      const currentIndex = sections.indexOf(currentSection);
+      
+      if (sectionId === currentSection) {
+        item.classList.add('active');
+        item.classList.remove('passed');
+      } else if (sectionIndex < currentIndex) {
+        item.classList.remove('active');
+        item.classList.add('passed');
+      } else {
+        item.classList.remove('active', 'passed');
+      }
+    });
+
+    // Update the progress line height dynamically
+    updateProgressLine(sections, currentSection);
+  }
+
+  // Update progress line based on current section
+  function updateProgressLine(sections, currentSection) {
+    const progressContainer = document.querySelector('.progress-nav-container');
+    if (!progressContainer) return;
+
+    const currentIndex = sections.indexOf(currentSection);
+    const totalItems = sections.length - 1;
+    
+    if (currentIndex >= 0) {
+      // Calculate the percentage based on current section
+      const lineProgress = (currentIndex / totalItems) * 100;
+      progressContainer.style.setProperty('--progress-height', `${lineProgress}%`);
+    }
+  }
+
+  // Click handlers for progress nav
+  progressNavItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const sectionId = item.dataset.section;
+      const section = document.getElementById(sectionId);
+      
+      if (section) {
+        const offset = 100;
+        const elementPosition = section.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: elementPosition - offset,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // Scroll to top handler
+  if (scrollToTop) {
+    scrollToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  // Throttled scroll event
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateProgressBar();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  // Initial update
+  updateProgressBar();
 </script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID 

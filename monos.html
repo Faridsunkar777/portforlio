@@ -24,6 +24,74 @@
 <div id="site-border-right"></div>
 <div id="site-border-top"></div>
 <div id="site-border-bottom"></div>
+
+<!-- Reading Progress Bar -->
+<div class="reading-progress-bar">
+  <div class="reading-progress-fill" id="progressFill"></div>
+</div>
+
+<!-- Project Progress Navigation -->
+<nav class="project-progress-nav" id="progressNav">
+  <div class="progress-nav-container">
+    <ul class="progress-nav-list">
+      <li class="progress-nav-item" data-section="overview">
+        <div class="progress-nav-dot" data-number="01"></div>
+        <div class="progress-nav-label">
+          <span class="progress-nav-stage">START</span>
+          <span class="progress-nav-title">Overview</span>
+        </div>
+      </li>
+      <li class="progress-nav-item" data-section="discover">
+        <div class="progress-nav-dot" data-number="02"></div>
+        <div class="progress-nav-label">
+          <span class="progress-nav-stage">DISCOVER</span>
+          <span class="progress-nav-title">Problem</span>
+        </div>
+      </li>
+      <li class="progress-nav-item" data-section="research">
+        <div class="progress-nav-dot" data-number="03"></div>
+        <div class="progress-nav-label">
+          <span class="progress-nav-stage">RESEARCH</span>
+          <span class="progress-nav-title">Insights</span>
+        </div>
+      </li>
+      <li class="progress-nav-item" data-section="define">
+        <div class="progress-nav-dot" data-number="04"></div>
+        <div class="progress-nav-label">
+          <span class="progress-nav-stage">DEFINE</span>
+          <span class="progress-nav-title">User Needs</span>
+        </div>
+      </li>
+      <li class="progress-nav-item" data-section="develop">
+        <div class="progress-nav-dot" data-number="05"></div>
+        <div class="progress-nav-label">
+          <span class="progress-nav-stage">DEVELOP</span>
+          <span class="progress-nav-title">Design</span>
+        </div>
+      </li>
+      <li class="progress-nav-item" data-section="deliver">
+        <div class="progress-nav-dot" data-number="06"></div>
+        <div class="progress-nav-label">
+          <span class="progress-nav-stage">DELIVER</span>
+          <span class="progress-nav-title">Solution</span>
+        </div>
+      </li>
+      <li class="progress-nav-item" data-section="reflection">
+        <div class="progress-nav-dot" data-number="07"></div>
+        <div class="progress-nav-label">
+          <span class="progress-nav-stage">REFLECT</span>
+          <span class="progress-nav-title">Learnings</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Scroll to Top Button -->
+<div class="scroll-to-top" id="scrollToTop">
+  <i class="fa fa-arrow-up"></i>
+</div>
+
 <!-- Add your content of header -->
 <header>
   <nav class="navbar  navbar-fixed-top navbar-default">
@@ -61,7 +129,7 @@
   </nav>
 </header>
 <!-- Project Hero Section -->
-<div class="project-hero-section">
+<div class="project-hero-section" id="overview">
   <div class="container-fluid project-hero-container">
     <!-- Project Header -->
     <div class="project-header">
@@ -146,7 +214,7 @@
     </div>
 
     <!-- Problem Statement -->
-    <div class="case-study-step case-study-step-bordered">
+    <div class="case-study-step case-study-step-bordered" id="discover">
       <div class="row">
         <div class="col-xs-12 col-md-3">
           <div class="case-study-step-header">
@@ -164,7 +232,7 @@
     </div>
 
     <!-- Background Research -->
-    <div class="case-study-step">
+    <div class="case-study-step" id="research">
       <div class="row">
         <div class="col-xs-12 col-md-3">
           <div class="case-study-step-header">
@@ -187,7 +255,7 @@
     </div>
 
     <!-- Findings -->
-    <div class="case-study-step case-study-step-bg-light">
+    <div class="case-study-step case-study-step-bg-light" id="define">
       <div class="row">
         <div class="col-xs-12 col-md-3">
           <div class="case-study-step-header">
@@ -205,7 +273,7 @@
     </div>
 
     <!-- LO-FI Wireframes -->
-    <div class="case-study-step">
+    <div class="case-study-step" id="develop">
       <div class="row">
         <div class="col-xs-12 col-md-3">
           <div class="case-study-step-header">
@@ -229,7 +297,7 @@
     </div>
 
     <!-- HI-FI Wireframes -->
-    <div class="case-study-step">
+    <div class="case-study-step" id="deliver">
       <div class="row">
         <div class="col-xs-12 col-md-3">
           <div class="case-study-step-header">
@@ -252,7 +320,7 @@
     </div>
 
     <!-- Conclusion -->
-    <div class="case-study-step case-study-step-bg-dark case-study-step-conclusion case-study-step-reflection">
+    <div class="case-study-step case-study-step-bg-dark case-study-step-conclusion case-study-step-reflection" id="reflection">
       <!-- Toggle Header -->
       <div class="reflection-toggle" onclick="toggleReflection(this)">
         <div class="reflection-toggle-left">
@@ -292,15 +360,21 @@
   </div>
 </div>
 
-<!-- Project Footer Image -->
-<div class="project-footer-image">
-  <div class="container-fluid project-hero-container">
-    <div class="project-footer-image-wrapper">
-      <img src="./assets/images/work001-04.jpg" alt="MONOS App">
+<!-- Hire Me CTA Section -->
+<div class="hire-me-cta-section">
+  <div class="container-fluid">
+    <div class="hire-me-cta-container">
+      <div class="hire-me-cta-content">
+        <h2 class="hire-me-title">Let's Work Together</h2>
+        <p class="hire-me-subtitle">Have a project in mind? I'd love to help bring your ideas to life.</p>
+        <a href="./contact.html" class="hire-me-btn">
+          <span>Hire Me</span>
+          <i class="fa fa-arrow-right"></i>
+        </a>
+      </div>
     </div>
   </div>
 </div>
-
 
 <footer class="footer-container text-center">
   <div class="container">
@@ -334,6 +408,166 @@
       }, 100);
     }
   }
+
+  // Reading Progress Indicator
+  const progressFill = document.getElementById('progressFill');
+  const progressNav = document.getElementById('progressNav');
+  const scrollToTop = document.getElementById('scrollToTop');
+  const progressNavItems = document.querySelectorAll('.progress-nav-item');
+
+  // Update progress bar on scroll
+  function updateProgressBar() {
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
+    
+    if (progressFill) {
+      progressFill.style.width = scrollPercent + '%';
+    }
+
+    // Show/hide progress nav and scroll to top button
+    if (scrollTop > 400) {
+      progressNav?.classList.add('visible');
+      scrollToTop?.classList.add('visible');
+    } else {
+      progressNav?.classList.remove('visible');
+      scrollToTop?.classList.remove('visible');
+    }
+
+    // Update active section in nav
+    updateActiveSection();
+  }
+
+  // Update active section based on scroll position
+  function updateActiveSection() {
+    const sections = ['overview', 'discover', 'research', 'define', 'develop', 'deliver', 'reflection'];
+    let currentSection = '';
+    let maxProgress = 0;
+    const windowHeight = window.innerHeight;
+    const triggerPoint = windowHeight * 0.3; // 30% from top
+
+    // Find which section is most visible in the trigger area
+    sections.forEach(sectionId => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        const sectionTop = rect.top;
+        const sectionBottom = rect.bottom;
+        const sectionHeight = rect.height;
+        
+        // Calculate how much of the section is in the viewport
+        const visibleTop = Math.max(0, Math.min(sectionBottom, windowHeight) - Math.max(sectionTop, 0));
+        const visiblePercent = visibleTop / sectionHeight;
+        
+        // Check if section is in the trigger area
+        if (sectionTop <= triggerPoint && sectionBottom >= triggerPoint) {
+          currentSection = sectionId;
+        }
+        
+        // Track progress for visual line
+        if (sectionTop < triggerPoint) {
+          const sectionIndex = sections.indexOf(sectionId);
+          if (sectionIndex > maxProgress) {
+            maxProgress = sectionIndex;
+          }
+        }
+      }
+    });
+
+    // If no section in trigger area, use the closest one
+    if (!currentSection) {
+      let minDistance = Infinity;
+      sections.forEach(sectionId => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const distance = Math.abs(rect.top - triggerPoint);
+          if (distance < minDistance) {
+            minDistance = distance;
+            currentSection = sectionId;
+          }
+        }
+      });
+    }
+
+    // Update active state and passed state in nav
+    progressNavItems.forEach(item => {
+      const sectionId = item.dataset.section;
+      const sectionIndex = sections.indexOf(sectionId);
+      const currentIndex = sections.indexOf(currentSection);
+      
+      if (sectionId === currentSection) {
+        item.classList.add('active');
+        item.classList.remove('passed');
+      } else if (sectionIndex < currentIndex) {
+        item.classList.remove('active');
+        item.classList.add('passed');
+      } else {
+        item.classList.remove('active', 'passed');
+      }
+    });
+
+    // Update the progress line height dynamically
+    updateProgressLine(sections, currentSection);
+  }
+
+  // Update progress line based on current section
+  function updateProgressLine(sections, currentSection) {
+    const progressContainer = document.querySelector('.progress-nav-container');
+    if (!progressContainer) return;
+
+    const currentIndex = sections.indexOf(currentSection);
+    const totalItems = sections.length - 1;
+    
+    if (currentIndex >= 0) {
+      // Calculate the percentage based on current section
+      const lineProgress = (currentIndex / totalItems) * 100;
+      progressContainer.style.setProperty('--progress-height', `${lineProgress}%`);
+    }
+  }
+
+  // Click handlers for progress nav
+  progressNavItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const sectionId = item.dataset.section;
+      const section = document.getElementById(sectionId);
+      
+      if (section) {
+        const offset = 100;
+        const elementPosition = section.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: elementPosition - offset,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // Scroll to top handler
+  if (scrollToTop) {
+    scrollToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  // Throttled scroll event
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateProgressBar();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  // Initial update
+  updateProgressBar();
 </script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
